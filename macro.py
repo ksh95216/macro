@@ -20,8 +20,12 @@ class Macro:
 
     def test1(self):
 
+        self.driver.get('http://www.edup.co.kr/')
+        # 여기 IE에서 사용되는 쿠키로 변경
+        cookies = '''
+        '''
+        self.driver.execute_script(cookies);
         self.driver.get('http://www.edup.co.kr/lectureroom/study_list.asp')
-        # time.sleep(10)
 
     def get_study_list(self):
 
